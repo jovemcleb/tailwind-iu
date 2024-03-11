@@ -3,7 +3,7 @@ import { Sidebar } from '../Components/Sidebar'
 
 export default function LayoutApp() {
   return (
-    <div className="grid-cols-app grid min-h-screen">
+    <div className="grid min-h-screen grid-cols-app">
       <Sidebar />
       <main className="px-4 pb-12 pt-8">
         <Outlet />
