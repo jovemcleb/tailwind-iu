@@ -1,10 +1,10 @@
-import { Cog, LifeBuoy, Search } from 'lucide-react'
-import { Logo } from '../Logo'
-import { MainNavigation } from './MainNavigation'
-import { NavItem } from './MainNavigation/NavItem'
-import UsedSpaceWidget from './UsedSpaceWidget'
-import { Profile } from './Profile'
-import * as Input from '../Input'
+import { Cog, LifeBuoy, Search } from 'lucide-react';
+import { Logo } from '../Logo';
+import { MainNavigation } from './MainNavigation';
+import { NavItem } from './MainNavigation/NavItem';
+import UsedSpaceWidget from './UsedSpaceWidget';
+import { Profile } from './Profile';
+import * as Input from '../Input';
 
 export function Sidebar() {
   return (
@@ -32,5 +32,5 @@ export function Sidebar() {
 
       <Profile />
     </aside>
-  )
+  );
 }

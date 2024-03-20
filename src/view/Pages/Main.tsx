@@ -149,8 +149,11 @@ export function Main() {
               </span>
             </label>
             <FileInput.Root>
-              <FileInput.Trigger />
-              <FileInput.Control multiple />
+              <div className="flex w-full flex-col justify-center">
+                <FileInput.Trigger />
+                <FileInput.FileList />
+                <FileInput.Control multiple />
+              </div>
             </FileInput.Root>
           </div>
 

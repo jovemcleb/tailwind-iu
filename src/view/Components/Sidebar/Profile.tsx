@@ -1,4 +1,4 @@
-import { LogOut } from 'lucide-react'
+import { LogOut } from 'lucide-react';
 
 export function Profile() {
   return (
@@ -20,5 +20,5 @@ export function Profile() {
         <LogOut className="h-5 w-5 text-zinc-500" />
       </button>
     </div>
-  )
+  );
 }
