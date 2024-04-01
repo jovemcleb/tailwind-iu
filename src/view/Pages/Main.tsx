@@ -1,9 +1,10 @@
 import { SettingsTabs } from '../Components/SettingsTabs';
 import * as Input from '../Components/Input';
-import { Mail } from 'lucide-react';
+import { Bold, Italic, Link2, List, ListOrdered, Mail } from 'lucide-react';
 import * as FileInput from '../Components/Form/FileInput';
 import { Select } from '../Components/Form/Select';
 import { SelectItem } from '../Components/Form/Select/SelectItem';
+import { TextArea } from '../Components/Form/TextArea';
 
 export function Main() {
   return (
@@ -145,7 +146,61 @@ export function Main() {
                 Write a short introduction.
               </span>
             </label>
-            <div className="grid grid-cols-2 gap-6"></div>
+            <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <Select placeholder="">
+                  <SelectItem
+                    value="normal"
+                    defaultChecked
+                    text="Normal text"
+                  />
+                  <SelectItem value="md" text="Markdown" />
+                </Select>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Bold className="h-5 w-5 text-zinc-500" strokeWidth={2.5} />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Italic
+                      className="h-5 w-5 text-zinc-500"
+                      strokeWidth={2.5}
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <Link2
+                      className="h-5 w-5 text-zinc-500"
+                      strokeWidth={2.5}
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <List className="h-5 w-5 text-zinc-500" strokeWidth={2.5} />
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-md p-2 hover:bg-zinc-50"
+                  >
+                    <ListOrdered
+                      className="h-5 w-5 text-zinc-500"
+                      strokeWidth={2.5}
+                    />
+                  </button>
+                </div>
+              </div>
+              <TextArea id="bio" />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
