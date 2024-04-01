@@ -1,9 +1,9 @@
-import * as Tabs from '@radix-ui/react-tabs'
-import { motion } from 'framer-motion'
+import * as Tabs from '@radix-ui/react-tabs';
+import { motion } from 'framer-motion';
 interface TabItemProps {
-  value: string
-  title: string
-  isSelected?: boolean
+  value: string;
+  title: string;
+  isSelected?: boolean;
 }
 
 export function TabItem({ title, value, isSelected = false }: TabItemProps) {
@@ -20,5 +20,5 @@ export function TabItem({ title, value, isSelected = false }: TabItemProps) {
         />
       )}
     </Tabs.Trigger>
-  )
+  );
 }

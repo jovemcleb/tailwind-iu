@@ -1,9 +1,9 @@
-import * as Tabs from '@radix-ui/react-tabs'
-import { TabItem } from './TabItem'
-import { useState } from 'react'
+import * as Tabs from '@radix-ui/react-tabs';
+import { TabItem } from './TabItem';
+import { useState } from 'react';
 
 export function SettingsTabs() {
-  const [currentTab, setCurrentTab] = useState('tab-1')
+  const [currentTab, setCurrentTab] = useState('tab-1');
   return (
     <Tabs.Root value={currentTab} onValueChange={setCurrentTab}>
       <Tabs.List className="mt-6 flex items-center gap-4 border-b border-zinc-200">
@@ -44,5 +44,5 @@ export function SettingsTabs() {
         />
       </Tabs.List>
     </Tabs.Root>
-  )
+  );
 }
