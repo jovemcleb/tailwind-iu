@@ -152,45 +152,30 @@ export function Main() {
                 </Select>
 
                 <div className="flex items-center gap-1">
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  <Button type="button" variant="ghost">
                     <Bold className="h-5 w-5 text-zinc-500" strokeWidth={2.5} />
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <Italic
                       className="h-5 w-5 text-zinc-500"
                       strokeWidth={2.5}
                     />
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <Link2
                       className="h-5 w-5 text-zinc-500"
                       strokeWidth={2.5}
                     />
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <List className="h-5 w-5 text-zinc-500" strokeWidth={2.5} />
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-md p-2 hover:bg-zinc-50"
-                  >
+                  </Button>
+                  <Button type="button" variant="ghost">
                     <ListOrdered
                       className="h-5 w-5 text-zinc-500"
                       strokeWidth={2.5}
                     />
-                  </button>
+                  </Button>
                 </div>
               </div>
               <TextArea id="bio" />
