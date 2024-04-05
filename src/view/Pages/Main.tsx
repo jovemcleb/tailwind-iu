@@ -15,7 +15,7 @@ export function Main() {
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex items-center justify-between border-b border-zinc-200 pb-5 ">
+        <div className="flex flex-col justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center ">
           <div>
             <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
             <span className="text-sm text-zinc-500">
@@ -36,45 +36,51 @@ export function Main() {
           id="settings"
           className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
         >
-          <div className="grid grid-cols-form gap-3">
+          <div className="flex flex-col gap-3 lg:grid lg:grid-cols-form">
             <label
               htmlFor="firstName"
               className=" text-sm font-medium text-zinc-700"
             >
               Name
             </label>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2">
               <Input.Root>
                 <Input.Control id="firstName" defaultValue="Caleb" />
               </Input.Root>
-              <Input.Root>
-                <Input.Control id="firstName" defaultValue="Lima" />
-              </Input.Root>
+              <div className="flex flex-col gap-3 lg:block">
+                <label
+                  htmlFor="lastName"
+                  className="text-sm font-medium text-zinc-700 lg:sr-only"
+                >
+                  Last Name
+                </label>
+                <Input.Root>
+                  <Input.Control id="lastName" defaultValue="Lima" />
+                </Input.Root>
+              </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="email"
               className=" text-sm font-medium text-zinc-700"
             >
               Email Address
             </label>
-            <div className="grid grid-cols-2 gap-6">
-              <Input.Root>
-                <Input.Prefix>
-                  <Mail className="h-5 w-5 text-zinc-500" />
-                </Input.Prefix>
-                <Input.Control
-                  id="email"
-                  type="email"
-                  defaultValue="caleb@email.com"
-                />
-              </Input.Root>
-            </div>
+            <Input.Root>
+              <Input.Prefix>
+                <Mail className="h-5 w-5 text-zinc-500" />
+              </Input.Prefix>
+              <Input.Control
+                id="email"
+                type="email"
+                defaultValue="caleb@email.com"
+              />
+            </Input.Root>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="photo"
               className=" text-sm font-medium text-zinc-700"
@@ -84,28 +90,27 @@ export function Main() {
                 This will be displayed on your profile.
               </span>
             </label>
-            <FileInput.Root>
+            <FileInput.Root className="flex flex-col gap-5 lg:flex-row lg:items-start">
               <FileInput.ImagePreview />
               <FileInput.Trigger />
               <FileInput.Control />
             </FileInput.Root>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="role"
               className=" text-sm font-medium text-zinc-700"
             >
               Role
             </label>
-            <div className="grid grid-cols-2 gap-6">
-              <Input.Root>
-                <Input.Control id="role" defaultValue="Developer" />
-              </Input.Root>
-            </div>
+
+            <Input.Root>
+              <Input.Control id="role" defaultValue="Developer" />
+            </Input.Root>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="country"
               className=" text-sm font-medium text-zinc-700"
@@ -119,7 +124,7 @@ export function Main() {
             </Select>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="timezone"
               className=" text-sm font-medium text-zinc-700"
@@ -133,7 +138,7 @@ export function Main() {
             </Select>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label htmlFor="bio" className=" text-sm font-medium text-zinc-700">
               Bio
               <span className="mt-0.5 block text-sm font-normal text-zinc-500">
@@ -141,7 +146,7 @@ export function Main() {
               </span>
             </label>
             <div className="space-y-3">
-              <div className="grid grid-cols-2 gap-3">
+              <div className="flex flex-col gap-3 lg:grid lg:grid-cols-2">
                 <Select placeholder="">
                   <SelectItem
                     value="normal"
@@ -182,7 +187,7 @@ export function Main() {
             </div>
           </div>
 
-          <div className="grid grid-cols-form gap-3 pt-5">
+          <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="portfolioProjects"
               className=" text-sm font-medium text-zinc-700"
