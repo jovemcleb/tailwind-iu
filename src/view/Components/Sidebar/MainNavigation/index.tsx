@@ -5,8 +5,8 @@ import {
   Home,
   SquareStack,
   Users,
-} from 'lucide-react'
-import { NavItem } from './NavItem'
+} from 'lucide-react';
+import { NavItem } from './NavItem';
 
 export function MainNavigation() {
   return (
@@ -18,5 +18,5 @@ export function MainNavigation() {
       <NavItem icon={Flag} title="Reporting" />
       <NavItem icon={Users} title="Users" />
     </nav>
-  )
+  );
 }

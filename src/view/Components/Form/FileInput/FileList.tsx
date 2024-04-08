@@ -9,7 +9,7 @@ export function FileList() {
   return (
     <div ref={parent} className="mt-4 space-y-3">
       {files.map(({ name, size }) => (
-        <FileItem key={name} name={name} size={size} state="progress" />
+        <FileItem key={name} name={name} size={size} state="complete" />
       ))}
     </div>
   );
